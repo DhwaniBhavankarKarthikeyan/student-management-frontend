@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"], 
+        input[type="date"], 
+        select, 
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .form-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-actions input {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .form-actions input[type="submit"] {
+            background-color: #4CAF50;
+        }
+
+        .form-actions input[type="reset"] {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>STUDENT REGISTRATION FORM</h1>
+    <form>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" maxlength="30">
+
+        <label for="mname">Middle Name:</label>
+        <input type="text" id="mname" name="mname" maxlength="30">
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" maxlength="30">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Mobile Number:</label>
+        <input type="tel" id="phone" name="phone" maxlength="10">
+
+        <label>Gender:</label>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+        </div>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4"></textarea>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" maxlength="30">
+
+        <label for="pincode">Pin Code:</label>
+        <input type="text" id="pincode" name="pincode" maxlength="6">
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" maxlength="30">
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <!-- More options -->
+        </select>
+
+        <label><strong>Hobbies:</strong></label>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 5px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <input type="checkbox" id="coding" name="hobbies" value="Coding">
+                <label for="coding">Coding</label>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <input type="checkbox" id="blog-writing" name="hobbies" value="Blog Writing">
+                <label for="blog-writing">Blog Writing</label>
+            </div>
+        </div>
+
+        <label>Qualification:</label>
+        <table>
+            <tr>
+                <th>S.No.</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text" name="board_x"></td>
+                <td><input type="text" name="percentage_x"></td>
+                <td><input type="text" name="year_x"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text" name="board_xii"></td>
+                <td><input type="text" name="percentage_xii"></td>
+                <td><input type="text" name="year_xii"></td>
+            </tr>
+        </table>
+
+        <label>Courses Applied For:</label>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <input type="radio" id="Btech" name="Courses" value="Btech">
+            <label for="Btech">BTech</label>
+            <input type="radio" id="Mtech" name="Courses" value="Mtech">
+            <label for="Mtech">MTech</label>
+        </div>
+
+        <div class="form-actions">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>
